@@ -21,6 +21,11 @@ export type IconName =
 
 export type ProjectTone = 'blue' | 'navy' | 'sage' | 'steel' | 'sand' | 'powder'
 
+export type ProjectScreenshot = {
+  src: string
+  alt: string
+}
+
 export type Project = {
   id: string
   name: string
@@ -39,6 +44,14 @@ export type Project = {
   challenges: string
   repositoryUrl?: string
   demoUrl?: string
+  screenshots?: ProjectScreenshot[]
+}
+
+export type Certification = {
+  title: string
+  issuer: string
+  year: string
+  url?: string
 }
 
 export type ExperienceItem = {

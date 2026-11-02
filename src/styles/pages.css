@@ -50,7 +50,9 @@
 .case-layout aside { position: sticky; top: 110px; align-self: start; display: flex; flex-direction: column; gap: 13px; }.case-layout aside span { margin-bottom: 5px; color: var(--sky-dark); font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }.case-layout aside a { color: var(--slate); font-size: 12px; }.case-layout aside a:hover { color: var(--navy); }
 .case-content { max-width: 760px; }.case-content article { padding-block: 50px; border-bottom: 1px solid var(--border); scroll-margin-top: 90px; }.case-content article:first-child { padding-top: 0; }.case-content h2 { margin: 13px 0 17px; font-size: 32px; }.case-content p { font-size: 15px; }.case-content .lead { color: var(--navy); font: 500 18px/1.7 var(--font-heading); }
 .case-content ul { list-style: none; padding: 0; margin: 24px 0 0; }.case-content li { display: flex; align-items: center; gap: 12px; padding: 13px 0; border-bottom: 1px solid var(--border); font-size: 13px; }.case-content li svg { color: var(--sky-dark); }
-.tech-stack { margin-top: 24px; }.gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 25px; }.gallery div { min-height: 230px; display: grid; place-items: center; background: var(--powder); color: var(--slate); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+.tech-stack { margin-top: 24px; }.gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 25px; }
+.gallery > div { min-height: 230px; display: grid; place-items: center; background: var(--powder); color: var(--slate); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+.gallery img { width: 100%; height: 230px; object-fit: cover; border: 1px solid var(--border); background: var(--surface); }
 .case-content .project-links { display: flex; justify-content: space-between; align-items: end; }.project-links > div:last-child { display: flex; gap: 10px; }
 
 .timeline-section { display: grid; grid-template-columns: .65fr 1.35fr; gap: 100px; padding-block: 100px 120px; }
@@ -76,5 +78,12 @@
 form { padding: 35px; background: var(--surface); border: 1px solid var(--border); }.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }label { display: block; margin-bottom: 19px; color: var(--navy); font-size: 12px; font-weight: 600; }input, textarea { width: 100%; margin-top: 8px; padding: 13px 14px; border: 1px solid var(--border); border-radius: 0; background: var(--off-white); color: var(--navy); font-size: 12px; transition: border-color .2s; }input::placeholder, textarea::placeholder { color: #667485; }input:focus, textarea:focus { border-color: var(--sky-dark); outline: none; }textarea { resize: vertical; }.form-hint { margin-bottom: 14px; color: var(--slate); font-size: 12px; }.form-note { min-height: 18px; margin-top: 12px; font-size: 12px; color: var(--sky-dark); }
 .form-error { display: block; margin-top: 6px; color: #a33b3b; font-size: 12px; font-weight: 500; }
 input[aria-invalid='true'], textarea[aria-invalid='true'] { border-color: #a33b3b; }
+
+.cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.cert-card { min-height: 170px; padding: 28px; background: var(--surface); border: 1px solid var(--border); }
+.cert-card > span { color: var(--sky-dark); font-size: 12px; font-weight: 600; }
+.cert-card h3 { margin-top: 22px; font-size: 19px; }
+.cert-card p { margin-top: 7px; font-size: 13px; }
+.cert-card.placeholder { background: var(--off-white); border-style: dashed; }
 
 footer { background: #1d2d3f; color: white; }.footer-main { display: grid; grid-template-columns: 1fr auto auto; gap: 120px; padding-block: 68px; }.footer-brand { color: white; }.footer-main > div:first-child p { margin-top: 15px; color: #9eacba; font-size: 12px; }.footer-nav { min-width: 110px; display: flex; flex-direction: column; gap: 11px; }.footer-nav > span { margin-bottom: 5px; color: var(--sky); font-size: 12px; text-transform: uppercase; letter-spacing: .12em; }.footer-nav button, .footer-nav a { width: fit-content; border: 0; padding: 0; background: none; color: #bdc7d0; cursor: pointer; font-size: 12px; }.footer-nav button:hover, .footer-nav a:hover { color: white; }.footer-bottom { display: flex; justify-content: space-between; padding-block: 21px; border-top: 1px solid rgba(255,255,255,.1); color: #93a1ad; font-size: 12px; }
