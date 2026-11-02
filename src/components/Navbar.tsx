@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { navItems } from '@/data/navigation'
+import { profile } from '@/data/profile'
 import { Icon } from '@/components/Icon'
 
 export function Navbar() {
@@ -32,6 +33,7 @@ export function Navbar() {
           ))}
         </div>
         <div className="nav-actions">
+          {profile.cvUrl && <a className="button nav-cv" href={profile.cvUrl} download>CV</a>}
           <button className="menu-button" onClick={() => setOpen(!open)} aria-label={open ? 'Tutup menu' : 'Buka menu'} aria-expanded={open}><Icon name={open ? 'x' : 'menu'} size={22} /></button>
         </div>
       </div>
@@ -48,6 +50,7 @@ export function Navbar() {
               {item.label}<Icon name="chevron" />
             </NavLink>
           ))}
+          {profile.cvUrl && <a className="mobile-cv" href={profile.cvUrl} download onClick={() => setOpen(false)}>Unduh CV<Icon name="arrowDown" /></a>}
         </div>
       )}
     </nav>

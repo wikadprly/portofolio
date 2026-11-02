@@ -10,10 +10,10 @@ export function Projects() {
   const shown = filter === filters[0] ? projects : projects.filter(project => project.category === filter)
   return (
     <>
-      <PageHeader eyebrow="Karya pilihan" title="Proyek yang dibangun dengan tujuan." text="Mulai dari produk web praktis hingga eksplorasi AI—setiap proyek mewakili masalah, proses, dan pembelajaran baru." number="02" />
+      <PageHeader eyebrow="Proyek" title="Proyek yang saya kerjakan" text="Mulai dari aplikasi web hingga eksplorasi AI/data. Setiap proyek mencakup masalah, proses, dan pembelajaran yang berbeda." />
       <section className="container projects-section">
         <div className="filters" role="group" aria-label="Filter proyek">
-          {filters.map(item => <button key={item} className={filter === item ? 'active' : ''} onClick={() => setFilter(item)}>{item}</button>)}
+          {filters.map(item => <button key={item} className={filter === item ? 'active' : ''} aria-pressed={filter === item} onClick={() => setFilter(item)}>{item}</button>)}
         </div>
         <div className="projects-grid">{shown.map(project => <ProjectCard key={project.id} project={project} />)}</div>
       </section>

@@ -4,8 +4,9 @@ import { Button } from '@/components/Button'
 import { Eyebrow } from '@/components/Eyebrow'
 import { Icon } from '@/components/Icon'
 import { Title } from '@/components/Title'
+import { profile } from '@/data/profile'
 
-const contactEmail = 'wikkadwia@gmail.com'
+const contactEmail = profile.email
 
 type Field = 'name' | 'email' | 'subject' | 'message'
 type Errors = Partial<Record<Field, string>>
@@ -71,17 +72,17 @@ export function Contact() {
     <section className="contact-page container">
       <div className="contact-head">
         <Eyebrow>Hubungi saya</Eyebrow>
-        <Title as="h1">Mari membangun sesuatu<br /><em>yang bermakna bersama.</em></Title>
-        <p>Saya selalu terbuka untuk kesempatan belajar, kolaborasi, dan percakapan yang bermakna.</p>
+        <Title as="h1">Mari berdiskusi tentang<br /><em>peluang atau proyek Anda.</em></Title>
+        <p>Saya terbuka untuk peluang magang, kerja, kolaborasi, dan percakapan seputar pengembangan produk digital.</p>
       </div>
       <div className="contact-grid">
         <div className="contact-details">
           <Title as="h2">Mulai percakapan</Title>
           <p>Punya peluang, ide, atau sekadar ingin terhubung? Kirimkan pesan dan saya akan membalasnya.</p>
           <a href={`mailto:${contactEmail}`}><span><Icon name="mail" /></span><div><small>Email</small>{contactEmail}</div></a>
-          <a href="https://www.linkedin.com/in/wikadwiaprilia" target="_blank" rel="noreferrer"><span><Icon name="linkedin" /></span><div><small>LinkedIn</small>Profil profesional</div></a>
-          <a href="https://github.com/wikadprly" target="_blank" rel="noreferrer"><span><Icon name="github" /></span><div><small>GitHub</small>Kode & proyek</div></a>
-          <a href="https://www.instagram.com/wdprlyy/" target="_blank" rel="noreferrer"><span><Icon name="instagram" /></span><div><small>Instagram</small>@wdprlyy</div></a>
+          <a href={profile.linkedin} target="_blank" rel="noreferrer"><span><Icon name="linkedin" /></span><div><small>LinkedIn</small>Profil profesional</div></a>
+          <a href={profile.github} target="_blank" rel="noreferrer"><span><Icon name="github" /></span><div><small>GitHub</small>Kode & proyek</div></a>
+          <a href={profile.instagram} target="_blank" rel="noreferrer"><span><Icon name="instagram" /></span><div><small>Instagram</small>@wdprlyy</div></a>
         </div>
         <form onSubmit={submit} onChange={handleChange} noValidate>
           <div className="form-row">

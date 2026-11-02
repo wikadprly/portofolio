@@ -15,7 +15,7 @@ function renderAt(path = '/') {
 describe('routing', () => {
   it('menampilkan beranda di /', () => {
     renderAt('/')
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(/produk yang berguna/i)
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(/wika dwi aprilia/i)
   })
 
   it('menampilkan detail proyek berdasarkan id', () => {
@@ -33,6 +33,6 @@ describe('routing', () => {
     renderAt('/')
     const nav = screen.getByRole('navigation', { name: 'Navigasi utama' })
     await user.click(within(nav).getByRole('link', { name: 'Tentang' }))
-    expect(screen.getByRole('heading', { level: 1, name: /pribadi di balik setiap karya/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { level: 1, name: /profil dan latar belakang/i })).toBeInTheDocument()
   })
 })

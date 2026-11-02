@@ -7,7 +7,7 @@ import { Title } from '@/components/Title'
 export function Experience() {
   return (
     <>
-      <PageHeader eyebrow="Pengalaman" title="Belajar di luar ruang kelas." text="Pengalaman organisasi dan kepanitiaan yang membentuk cara saya berkomunikasi, berkolaborasi, dan bertanggung jawab." number="03" />
+      <PageHeader eyebrow="Pengalaman" title="Pengalaman organisasi dan kepanitiaan" text="Peran yang melatih komunikasi, perencanaan, koordinasi tim, dan tanggung jawab dalam lingkungan kampus." />
       <section className="container timeline-section">
         <div className="timeline-intro"><Eyebrow>Perjalanan kepemimpinan</Eyebrow><Title>Hadir, berkontribusi, dan bertumbuh.</Title><p>Setiap peran memberi saya pelajaran berbeda tentang manusia, perencanaan, dan tanggung jawab bersama.</p></div>
         <div className="timeline">
@@ -17,7 +17,6 @@ export function Experience() {
               <div className="timeline-content">
                 <span className="meta"><Icon name="calendar" size={15} />{item.period}</span>
                 <Title as="h2">{item.role}</Title><strong>{item.org}</strong><p>{item.text}</p>
-                <div className="doc-placeholder"><Icon name="briefcase" /><span>Tempat foto dokumentasi</span></div>
               </div>
             </article>
           ))}

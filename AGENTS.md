@@ -21,7 +21,7 @@ Jalankan `pnpm dev`. Server memakai `$PORT` jika diisi, default `3000`.
 - `src/index.css` — mengimpor `src/styles/core.css`, `home.css`, `pages.css`, `responsive.css`
 - `src/styles/` — design token (CSS variables), reset, gaya per area, dan media query
 - `src/types.ts` — tipe domain (`Project`, `ExperienceItem`, `SkillGroup`, `IconName`)
-- `src/data/` — konten statis: `projects.ts`, `experience.ts`, `skills.ts`, `navigation.ts`, `metadata.ts`
+- `src/data/` — konten statis: `projects.ts`, `experience.ts`, `skills.ts`, `navigation.ts`, `metadata.ts`, `profile.ts`, `certifications.ts`
 - `src/components/` — komponen bersama: `Navbar`, `Footer`, `Icon`, `Button`, `ProjectCard`, dll.
 - `src/pages/` — halaman: `Home`, `About`, `Projects`, `ProjectDetail`, `Experience`, `Skills`, `Contact`, `NotFound`
 - `index.html` — shell Vite dengan metadata, font, dan `#root`
@@ -37,4 +37,7 @@ Jalankan `pnpm dev`. Server memakai `$PORT` jika diisi, default `3000`.
 - Styling memakai kelas kustom di `src/styles/`; Tailwind sudah dihapus.
 - Form kontak di `src/pages/Contact.tsx` memvalidasi input lalu mengirim lewat `mailto:` (membuka aplikasi email pengguna); belum memakai layanan pengiriman.
 - Tautan proyek opsional: isi `repositoryUrl` / `demoUrl` di `src/data/projects.ts`; tombolnya hanya tampil jika diisi.
-- Judul dokumen per halaman diatur di `src/App.tsx` memakai `src/data/metadata.ts`.
+- Judul dan deskripsi dokumen per halaman diatur di `src/App.tsx` memakai `src/data/metadata.ts`.
+- Identitas dan tautan sosial ada di `src/data/profile.ts`. Isi `cvUrl` (misalnya `/cv/cv.pdf`) untuk menampilkan tombol CV; selama kosong, tombol disembunyikan.
+- Tangkapan layar proyek opsional: isi `screenshots` di `src/data/projects.ts`; jika kosong, kartu memakai panel warna.
+- Sertifikasi opsional: isi `src/data/certifications.ts`; jika kosong, halaman Tentang menampilkan placeholder.

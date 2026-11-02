@@ -9,13 +9,12 @@ export function ContactCTA() {
   return (
     <section className="contact-cta">
       <div className="container">
-        <span className="cta-index">05</span>
         <div>
           <Eyebrow>Mari terhubung</Eyebrow>
-          <Title>Punya ide, peluang,<br />atau sekadar ingin menyapa?</Title>
-          <p>Saya selalu terbuka untuk belajar, berkolaborasi, dan berbagi percakapan yang bermakna.</p>
+          <Title>Punya peluang, ide,<br />atau ingin berdiskusi?</Title>
+          <p>Saya terbuka untuk peluang magang, kerja, dan kolaborasi yang relevan dengan pengembangan produk digital.</p>
         </div>
-        <Button icon="arrow" onClick={() => navigate('/contact')}>Mulai percakapan</Button>
+        <Button icon="arrow" onClick={() => navigate('/contact')}>Hubungi saya</Button>
       </div>
     </section>
   )

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { navItems } from '@/data/navigation'
+import { profile } from '@/data/profile'
 
 export function Footer() {
   return (
@@ -7,7 +8,7 @@ export function Footer() {
       <div className="footer-main container">
         <div>
           <Link className="brand footer-brand" to="/">Wika<span>.</span></Link>
-          <p>Terus belajar dan membangun produk<br />digital yang bermanfaat.</p>
+          <p>Membangun produk digital yang jelas,<br />bermanfaat, dan dapat diandalkan.</p>
         </div>
         <div className="footer-nav">
           <span>Jelajahi</span>
@@ -15,14 +16,15 @@ export function Footer() {
         </div>
         <div className="footer-nav">
           <span>Terhubung</span>
-          <a href="https://github.com/wikadprly" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/wikadwiaprilia" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="https://www.instagram.com/wdprlyy/" target="_blank" rel="noreferrer">Instagram</a>
+          <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
+          <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href={profile.instagram} target="_blank" rel="noreferrer">Instagram</a>
           <Link to="/contact">Email</Link>
+          {profile.cvUrl && <a href={profile.cvUrl} download>Unduh CV</a>}
         </div>
       </div>
       <div className="footer-bottom container">
-        <span>© 2026 Wika Dwi Aprilia</span>
+        <span>© 2026 {profile.name}</span>
         <span>Dirancang dan dibangun dengan sepenuh hati.</span>
       </div>
     </footer>

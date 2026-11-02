@@ -6,7 +6,7 @@ import { Title } from '@/components/Title'
 export function Skills() {
   return (
     <>
-      <PageHeader eyebrow="Keahlian & teknologi" title="Bekal yang saya gunakan untuk berkarya." text="Kemampuan praktis yang terus berkembang melalui kegiatan akademik, proyek mandiri, dan eksplorasi langsung." number="04" />
+      <PageHeader eyebrow="Keahlian" title="Keahlian dan teknologi" text="Kemampuan teknis dan nonteknis yang saya kembangkan melalui perkuliahan, proyek, dan pengalaman organisasi." />
       <section className="container skills-page-grid">
         {skillGroups.map((group, i) => (
           <article key={group.title}>

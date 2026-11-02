@@ -16,7 +16,7 @@ const values = [
 export function About() {
   return (
     <>
-      <PageHeader eyebrow="Tentang saya" title="Pribadi di balik setiap karya." text="Seorang mahasiswa dan pembelajar yang terus mencari cara untuk mengubah teknologi menjadi sesuatu yang bermanfaat." number="01" />
+      <PageHeader eyebrow="Tentang saya" title="Profil dan latar belakang" text="Mahasiswa Teknik Informatika dengan minat pada full-stack development, frontend, dan penerapan AI/data." />
       <section className="container profile-section">
         <div className="profile-visual"><img className="profile-image" src={portrait} alt="Foto Wika Dwi Aprilia" /><span>Semarang, Indonesia</span></div>
         <div className="profile-copy">
@@ -55,25 +55,21 @@ export function About() {
         <SectionHeading eyebrow="Nilai pribadi" title="Cara saya bekerja" />
         <div className="values-grid">{values.map(([title, text], i) => <article key={title}><span>0{i + 1}</span><Title as="h3">{title}</Title><p>{text}</p></article>)}</div>
       </section>
-      <section className="section container">
-        <SectionHeading eyebrow="Sertifikasi & pelatihan" title="Kredensial dan pembelajaran terstruktur" text="Sertifikasi, kursus, dan pelatihan relevan yang saya selesaikan akan tampil di sini." />
-        <div className="cert-grid">
-          {certifications.length ? certifications.map((certification) => (
-            <article className="cert-card" key={certification.title}>
-              <span>{certification.year}</span>
-              <Title as="h3">{certification.title}</Title>
-              <p>{certification.issuer}</p>
-              {certification.url && <Button variant="text" icon="arrow" href={certification.url} external>Lihat sertifikat</Button>}
-            </article>
-          )) : [1, 2].map((item) => (
-            <article className="cert-card placeholder" key={item}>
-              <span>0{item}</span>
-              <Title as="h3">Segera ditambahkan</Title>
-              <p>Sertifikat atau pelatihan akan tampil di sini.</p>
-            </article>
-          ))}
-        </div>
-      </section>
+      {certifications.length > 0 && (
+        <section className="section container">
+          <SectionHeading eyebrow="Sertifikasi & pelatihan" title="Kredensial dan pembelajaran terstruktur" text="Sertifikasi, kursus, dan pelatihan relevan yang telah saya selesaikan." />
+          <div className="cert-grid">
+            {certifications.map((certification) => (
+              <article className="cert-card" key={certification.title}>
+                <span>{certification.year}</span>
+                <Title as="h3">{certification.title}</Title>
+                <p>{certification.issuer}</p>
+                {certification.url && <Button variant="text" icon="arrow" href={certification.url} external>Lihat sertifikat</Button>}
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
     </>
   )
 }
