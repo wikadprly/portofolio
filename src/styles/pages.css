@@ -37,11 +37,14 @@
 .values-grid h3 { margin-top: 44px; font-size: 17px; }
 .values-grid p { margin-top: 8px; font-size: 13px; }
 
+.cert-section { padding-block: 64px 0; }
 .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .cert-card { min-height: 170px; padding: 26px; background: var(--surface); border: 1px solid var(--border); }
 .cert-card > span { color: var(--sky-dark); font-size: 12px; font-weight: 600; }
 .cert-card h3 { margin-top: 20px; font-size: 18px; }
 .cert-card p { margin-top: 6px; font-size: 13px; }
+.cert-tags { margin-top: 16px; }
+.cert-card > .button { margin-top: 16px; }
 
 .projects-section { padding-block: 56px 88px; }
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
@@ -56,9 +59,12 @@
 .detail-title h1 { margin-top: 8px; font-size: clamp(38px, 5vw, 56px); line-height: 1.08; }
 .detail-title > div > p { margin-top: 8px; color: var(--navy); font: 500 16px var(--font-heading); }
 .detail-intro { font-size: 15px; }
-.project-visual.large { min-height: 420px; padding: 44px; }
-.project-visual.large .visual-code { font-size: 88px; }
+.project-visual.large { min-height: 340px; padding: 40px; justify-content: center; gap: 10px; }
+.project-visual.large .visual-mark { right: 40px; bottom: -34px; font-size: 210px; }
 .project-visual.large .visual-label { font-size: 11px; }
+.project-visual.large .visual-sub { font-size: 16px; }
+.project-visual.large.has-cover { min-height: 0; padding: 0; }
+.project-visual.large.has-cover img { position: static; height: auto; }
 .detail-meta { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--border); }
 .detail-meta div { padding: 20px 0; }
 .detail-meta span, .detail-meta strong { display: block; }
@@ -80,8 +86,6 @@
 .case-content li { display: flex; align-items: center; gap: 11px; padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
 .case-content li svg { color: var(--sky-dark); }
 .tech-stack { margin-top: 20px; }
-.gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 22px; }
-.gallery img { width: 100%; height: 250px; object-fit: cover; border: 1px solid var(--border); background: var(--surface); }
 .case-content .project-links { display: flex; justify-content: space-between; align-items: end; }
 .project-links > div:last-child { display: flex; flex-wrap: wrap; gap: 10px; }
 
@@ -89,6 +93,11 @@
 .timeline-intro { position: sticky; top: 104px; align-self: start; }
 .timeline-intro h2 { margin: 12px 0 14px; font-size: clamp(28px, 3vw, 36px); line-height: 1.22; }
 .timeline-intro p { font-size: 14px; }
+.timeline-groups { display: flex; flex-direction: column; gap: 56px; }
+.timeline-group-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 26px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+.timeline-group-head span { color: var(--navy); font: 600 12px var(--font-heading); letter-spacing: .08em; text-transform: uppercase; }
+.timeline-group-head small { color: var(--slate); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+.timeline-group .timeline article:last-child { padding-bottom: 0; }
 .timeline { position: relative; }
 .timeline::before { position: absolute; top: 12px; bottom: 0; left: 22px; width: 1px; background: var(--border); content: ''; }
 .timeline article { position: relative; display: grid; grid-template-columns: 45px 1fr; gap: 26px; padding-bottom: 48px; }
@@ -100,11 +109,12 @@
 .timeline-content > strong { color: var(--soft-navy); font: 600 12px var(--font-heading); }
 .timeline-content > p { margin-top: 13px; max-width: 620px; font-size: 14px; }
 
-.skills-page-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; padding-block: 64px; }
-.skills-page-grid article { min-height: 250px; padding: 28px; background: var(--surface); border: 1px solid var(--border); }
-.skill-card-head { display: flex; justify-content: space-between; color: var(--sky-dark); }
-.skill-card-head span { font-size: 12px; }
-.skills-page-grid h2 { margin: 38px 0 18px; font-size: 21px; }
+.skills-section { padding-block: 64px; }
+.skills-rows { margin-top: 28px; border-top: 1px solid var(--border); }
+.skills-row { display: grid; grid-template-columns: 240px 1fr; align-items: center; gap: 32px; padding: 22px 0; border-bottom: 1px solid var(--border); }
+.skills-row-head { display: flex; align-items: center; gap: 10px; }
+.skills-row-head svg { flex: none; color: var(--sky-dark); }
+.skills-row-head h3 { font-size: 16px; }
 .large-tags { gap: 8px; }
 .large-tags span { padding: 7px 10px; background: var(--off-white); border: 1px solid var(--border); color: var(--slate); font-size: 12px; }
 .skill-note { margin-bottom: 88px; padding: 56px; background: var(--powder); text-align: center; }

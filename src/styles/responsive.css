@@ -67,20 +67,20 @@
   .detail-title { grid-template-columns: 1fr; gap: 22px; padding-block: 32px 28px; }
   .detail-title h1 { font-size: 38px; }
   .project-visual.large { min-height: 300px; padding: 28px; }
-  .project-visual.large .visual-code { font-size: 60px; }
+  .project-visual.large .visual-mark { right: 20px; bottom: -16px; font-size: 110px; }
+  .project-visual.large .visual-sub { max-width: 100%; }
   .detail-meta { grid-template-columns: 1fr; }
   .detail-meta div { border-bottom: 1px solid var(--border); }
   .detail-meta div:last-child { border-bottom: 0; }
   .case-layout { grid-template-columns: 1fr; padding-block: 28px 64px; }
   .case-layout aside { display: none; }
-  .gallery { grid-template-columns: 1fr; }
-  .gallery img { height: 220px; }
   .case-content .project-links { align-items: start; flex-direction: column; gap: 20px; }
   .timeline-section { grid-template-columns: 1fr; gap: 40px; padding-block: 64px; }
   .timeline-intro { position: static; }
   .timeline article { gap: 16px; }
   .timeline-content h2 { font-size: 19px; }
-  .skills-page-grid { grid-template-columns: 1fr; padding-block: 48px; }
+  .skills-row { grid-template-columns: 1fr; gap: 12px; padding: 20px 0; }
+  .skills-row-head h3 { font-size: 15px; }
   .skill-note { width: 100%; margin-bottom: 64px; padding: 44px 22px; }
   .skill-note h2 { font-size: 27px; }
   .contact-page { padding-block: 56px 64px; }

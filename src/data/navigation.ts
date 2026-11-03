@@ -3,6 +3,6 @@ export const navItems = [
   { label: 'Tentang', to: '/about' },
   { label: 'Proyek', to: '/projects' },
   { label: 'Pengalaman', to: '/experience' },
-  { label: 'Keahlian', to: '/skills' },
+  { label: 'Eksplorasi', to: '/skills' },
   { label: 'Kontak', to: '/contact' },
 ] as const

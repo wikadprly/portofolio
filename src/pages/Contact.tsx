@@ -71,14 +71,14 @@ export function Contact() {
   return (
     <section className="contact-page container">
       <div className="contact-head">
-        <Eyebrow>Hubungi saya</Eyebrow>
-        <Title as="h1">Kalau ada peluang atau ide,<br /><em>kirim saja pesannya.</em></Title>
-        <p>Saya terbuka untuk magang, kerja, dan kolaborasi. Balasan bisa lewat email atau salah satu kanal di bawah ini.</p>
+        <Eyebrow>Kontak</Eyebrow>
+        <Title as="h1">Mari terhubung.</Title>
+        <p>Kalau ingin berdiskusi, bertukar ide, atau menjalin koneksi, silakan hubungi lewat kanal di bawah. Untuk pesan yang lebih panjang, gunakan form di samping.</p>
       </div>
       <div className="contact-grid">
         <div className="contact-details">
           <Title as="h2">Kontak langsung</Title>
-          <p>Pilih kanal yang paling nyaman. Untuk pesan yang lebih panjang, gunakan form di samping.</p>
+          <p>Pilih kanal yang paling nyaman. Balasan menyusul lewat kanal yang sama.</p>
           <a href={`mailto:${contactEmail}`}><span><Icon name="mail" /></span><div><small>Email</small>{contactEmail}</div></a>
           <a href={profile.linkedin} target="_blank" rel="noreferrer"><span><Icon name="linkedin" /></span><div><small>LinkedIn</small>Profil profesional</div></a>
           <a href={profile.github} target="_blank" rel="noreferrer"><span><Icon name="github" /></span><div><small>GitHub</small>Kode & proyek</div></a>

@@ -13,7 +13,6 @@ export function ProjectDetail({ project }: { project: Project }) {
     { label: 'Tujuan', anchor: 'objectives' },
     { label: 'Peran saya', anchor: 'my-role' },
     { label: 'Implementasi', anchor: 'implementation' },
-    ...(project.screenshots?.length ? [{ label: 'Galeri', anchor: 'gallery' }] : []),
     { label: 'Pembelajaran', anchor: 'learnings' },
   ]
 
@@ -43,17 +42,6 @@ export function ProjectDetail({ project }: { project: Project }) {
           <article id="objectives"><Eyebrow>Tujuan</Eyebrow><Title>Hal yang ingin dicapai</Title><ul>{project.objectives.map(item => <li key={item}><Icon name="check" />{item}</li>)}</ul></article>
           <article id="my-role"><Eyebrow>Peran & kontribusi</Eyebrow><Title>Kontribusi saya</Title><p>{project.role}</p></article>
           <article id="implementation"><Eyebrow>Implementasi teknis</Eyebrow><Title>Proses pengembangan</Title><p>{project.implementation}</p><div className="tech-stack">{project.technologies.map(tech => <span key={tech}>{tech}</span>)}</div></article>
-          {project.screenshots?.length ? (
-            <article id="gallery">
-              <Eyebrow>Tangkapan layar & galeri</Eyebrow>
-              <Title>Tampilan produk</Title>
-              <div className="gallery">
-                {project.screenshots.map((shot) => (
-                  <img key={shot.src} src={shot.src} alt={shot.alt} loading="lazy" />
-                ))}
-              </div>
-            </article>
-          ) : null}
           <article id="learnings"><Eyebrow>Tantangan & pembelajaran</Eyebrow><Title>Hal yang saya pelajari</Title><p>{project.challenges}</p></article>
           {(project.repositoryUrl || project.demoUrl) && (
             <article className="project-links">

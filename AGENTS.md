@@ -40,4 +40,7 @@ Jalankan `pnpm dev`. Server memakai `$PORT` jika diisi, default `3000`.
 - Judul dan deskripsi dokumen per halaman diatur di `src/App.tsx` memakai `src/data/metadata.ts`.
 - Identitas dan tautan sosial ada di `src/data/profile.ts`. Isi `cvUrl` (misalnya `/cv/cv.pdf`) untuk menampilkan tombol CV; selama kosong, tombol disembunyikan.
 - Tangkapan layar proyek opsional: isi `screenshots` di `src/data/projects.ts`; jika kosong, kartu memakai panel warna.
+- Berkas tangkapan layar disimpan di `public/projects/<id-proyek>/` dan dirujuk dengan path absolut (mis. `/projects/tomato-ai/beranda.png`), bukan diimpor dari `src/assets/`.
+- Pengalaman dipisah di `src/data/experience.ts`: `workExperience` untuk magang/pekerjaan, `organizationalExperience` untuk organisasi dan kepanitiaan. Kelompok yang kosong tidak ditampilkan di halaman Pengalaman.
+- Sertifikasi tampil di halaman Keahlian (di atas daftar alat), bukan di Tentang. Isi `src/data/certifications.ts`; field `skills` menentukan chip alat yang muncul di bawah tiap sertifikat.
 - Sertifikasi opsional: isi `src/data/certifications.ts`; jika kosong, halaman Tentang menampilkan placeholder.

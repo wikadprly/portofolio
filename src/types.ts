@@ -52,6 +52,7 @@ export type Certification = {
   issuer: string
   year: string
   url?: string
+  skills?: string[]
 }
 
 export type ExperienceItem = {

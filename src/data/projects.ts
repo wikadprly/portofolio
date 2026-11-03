@@ -48,9 +48,15 @@ export const projects: Project[] = [
     tone: 'sage',
     background: 'Menilai kematangan secara manual bergantung pada siapa yang melihat. Proyek ini mencoba pendekatan berbasis gambar agar penilaiannya lebih konsisten.',
     objectives: ['Menyiapkan dataset gambar tomat', 'Mencoba transfer learning dengan MobileNetV2', 'Mengevaluasi hasil klasifikasi'],
-    role: 'Saya mengerjakan bagian preprocessing gambar, eksperimen model, dan dokumentasi alurnya bersama tim.',
+    role: 'Di tim ini saya bertindak sebagai koordinator AI/ML. Bagian yang saya pegang: preprocessing gambar, eksperimen model, dan dokumentasi alurnya.',
     implementation: 'OpenCV untuk resize dan normalisasi gambar, TensorFlow dan MobileNetV2 untuk pelatihan serta pengujian model.',
     challenges: 'Dataset yang kecil dan pencahayaan yang tidak seragam membuat akurasi sulit stabil. Dari situ saya belajar bahwa kualitas data lebih menentukan daripada arsitektur model.',
+    screenshots: [
+      {
+        src: '/projects/tomato-ai/beranda.png',
+        alt: 'Beranda TomatoAI dengan judul Klasifikasi Tingkat Kematangan Tomat dan tombol Mulai Deteksi',
+      },
+    ],
   },
   {
     id: 'reconnaissance',
@@ -121,9 +127,15 @@ export const projects: Project[] = [
       'Menampilkan portofolio hasil desain',
       'Membuka akses konsultasi bagi calon pelanggan',
     ],
-    role: 'Dikerjakan berkelompok untuk mata kuliah Technopreneurship. Bagian saya ada di penyusunan konten layanan dan tampilan halamannya.',
+    role: 'Dikerjakan berkelompok untuk mata kuliah Technopreneurship. Bagian saya: penyusunan konten layanan dan tampilan halamannya.',
     implementation: 'Website disusun dari landing page, katalog layanan, portofolio desain, dan informasi bisnis, dengan akses konsultasi untuk calon pelanggan.',
     challenges: 'Menuliskan layanan kreatif yang abstrak menjadi penawaran yang jelas jadi bagian tersulit, terutama menentukan apa yang perlu ditampilkan lebih dulu.',
+    screenshots: [
+      {
+        src: '/projects/godigital-creative/beranda.png',
+        alt: 'Beranda GoDigital Creative dengan judul Bikin Brand-mu Naik Level Secara Digital',
+      },
+    ],
     demoUrl: 'https://www.godigitalcreative.web.id/',
   },
 ]

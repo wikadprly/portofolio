@@ -1,6 +1,28 @@
 import type { ExperienceItem } from '@/types'
 
-export const experience: ExperienceItem[] = [
+/**
+ * Magang, pekerjaan lepas, dan pekerjaan untuk klien.
+ * Isi entrinya di sini, urutkan dari yang terbaru. Kelompok ini otomatis
+ * muncul di halaman Pengalaman begitu ada satu entri.
+ *
+ * Contoh format:
+ * {
+ *   period: 'Jun — Agu 2026',
+ *   role: 'Magang Web Developer',
+ *   org: 'Nama Perusahaan',
+ *   text: 'Apa yang dikerjakan, pakai alat apa, dan hasilnya apa.',
+ * },
+ */
+export const workExperience: ExperienceItem[] = [
+  {
+    period: '[periode magang]',
+    role: '[posisi magang]',
+    org: '[nama perusahaan]',
+    text: '[apa yang dikerjakan, alat yang dipakai, dan hasilnya]',
+  },
+]
+
+export const organizationalExperience: ExperienceItem[] = [
   {
     period: 'Jul 2025 — Jul 2026',
     role: 'Deputi Kementerian Luar Negeri',

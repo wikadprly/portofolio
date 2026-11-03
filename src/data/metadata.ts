@@ -6,27 +6,27 @@ export type PageMeta = {
 export const pageMeta: Record<string, PageMeta> = {
   '/': {
     title: 'Wika Dwi Aprilia — Portofolio',
-    description: 'Portofolio Wika Dwi Aprilia, mahasiswa Teknik Informatika Politeknik Negeri Semarang. Berisi proyek web, pengalaman organisasi, dan keahlian teknis.',
+    description: 'Mahasiswa Teknik Informatika Politeknik Negeri Semarang. Tertarik pada teknologi, pengembangan perangkat lunak, dan hal-hal baru di bidang digital.',
   },
   '/about': {
     title: 'Tentang — Wika Dwi Aprilia',
-    description: 'Latar belakang, pendidikan, minat, dan cara kerja Wika Dwi Aprilia.',
+    description: 'Latar belakang, pendidikan, bidang yang diminati, dan hal yang saya pegang.',
   },
   '/projects': {
     title: 'Proyek — Wika Dwi Aprilia',
-    description: 'Proyek kuliah, proyek pribadi, dan pekerjaan klien yang dikerjakan Wika Dwi Aprilia.',
+    description: 'Proyek akademik, pengembangan mandiri, dan kolaborasi bersama tim.',
   },
   '/experience': {
     title: 'Pengalaman — Wika Dwi Aprilia',
-    description: 'Pengalaman organisasi dan kepanitiaan Wika Dwi Aprilia selama kuliah di Politeknik Negeri Semarang.',
+    description: 'Pengalaman kerja, magang, dan organisasi selama berkuliah di Politeknik Negeri Semarang.',
   },
   '/skills': {
-    title: 'Keahlian — Wika Dwi Aprilia',
-    description: 'Bahasa pemrograman, framework, dan alat yang dipakai Wika Dwi Aprilia untuk kuliah dan proyek.',
+    title: 'Eksplorasi — Wika Dwi Aprilia',
+    description: 'Teknologi, pembelajaran, dan kemampuan yang dikembangkan lewat perkuliahan, proyek, dan pelatihan.',
   },
   '/contact': {
     title: 'Kontak — Wika Dwi Aprilia',
-    description: 'Email, GitHub, LinkedIn, dan Instagram Wika Dwi Aprilia.',
+    description: 'Email, GitHub, LinkedIn, dan Instagram. Terbuka untuk diskusi, kolaborasi, dan kesempatan baru.',
   },
   '*': {
     title: 'Halaman tidak ditemukan — Wika Dwi Aprilia',

@@ -39,9 +39,12 @@
 .project-visual.steel { background: #d8e1ea; }
 .project-visual.sand { background: #eee8dd; }
 .project-visual.powder { background: #e2eef4; }
-.visual-code { font: 700 40px var(--font-heading); letter-spacing: -.06em; color: rgba(36, 54, 75, .42); }
-.visual-label { color: var(--slate); font-size: 11px; letter-spacing: .11em; text-transform: uppercase; }
+.visual-label { position: relative; color: var(--slate); font-size: 11px; letter-spacing: .11em; text-transform: uppercase; }
+.visual-mark { position: absolute; right: 16px; bottom: -10px; font: 700 84px/1 var(--font-heading); letter-spacing: -.07em; color: rgba(36, 54, 75, .14); pointer-events: none; }
+.visual-sub { position: relative; max-width: 58%; color: var(--soft-navy); font-size: 13px; font-weight: 500; line-height: 1.4; }
 .project-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.project-visual.has-cover { background: var(--off-white); }
+.project-card .project-visual img { object-fit: contain; }
 .project-card-body { display: flex; flex: 1; flex-direction: column; padding: 24px; }
 .project-card h3 { margin-top: 8px; font-size: 20px; }
 .project-card p { margin-top: 10px; font-size: 14px; line-height: 1.65; }

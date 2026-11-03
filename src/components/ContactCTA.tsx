@@ -8,8 +8,8 @@ export function ContactCTA() {
       <div className="container">
         <div>
           <Eyebrow>Kontak</Eyebrow>
-          <Title>Ada yang ingin<br />didiskusikan?</Title>
-          <p>Saya terbuka untuk magang, kerja, dan kolaborasi. Kirim email kalau ada yang bisa saya bantu.</p>
+          <Title>Mari terhubung.</Title>
+          <p>Terbuka untuk bertukar ide, berbagi pengalaman, dan menjalin koneksi lewat berbagai kesempatan maupun kolaborasi.</p>
         </div>
         <Button icon="arrow" to="/contact">Hubungi saya</Button>
       </div>
