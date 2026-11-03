@@ -7,9 +7,9 @@ import { Title } from '@/components/Title'
 export function Experience() {
   return (
     <>
-      <PageHeader eyebrow="Pengalaman" title="Pengalaman organisasi dan kepanitiaan" text="Peran yang melatih komunikasi, perencanaan, koordinasi tim, dan tanggung jawab dalam lingkungan kampus." />
+      <PageHeader eyebrow="Pengalaman" title="Pengalaman organisasi dan kepanitiaan" text="Peran yang saya ambil selama kuliah, dari kepanitiaan acara sampai kementerian di BEM." />
       <section className="container timeline-section">
-        <div className="timeline-intro"><Eyebrow>Perjalanan kepemimpinan</Eyebrow><Title>Hadir, berkontribusi, dan bertumbuh.</Title><p>Setiap peran memberi saya pelajaran berbeda tentang manusia, perencanaan, dan tanggung jawab bersama.</p></div>
+        <div className="timeline-intro"><Eyebrow>Di luar kelas</Eyebrow><Title>Belajar memimpin dari hal kecil.</Title><p>Tiap peran memberi pelajaran berbeda. Yang paling sering muncul: cara membagi pekerjaan dan menjaga komunikasi tetap jalan.</p></div>
         <div className="timeline">
           {experience.map((item, i) => (
             <article key={`${item.role}-${item.period}`}>

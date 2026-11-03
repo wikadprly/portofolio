@@ -1,11 +1,12 @@
 import type { Project } from '@/types'
+import { Link } from 'react-router-dom'
 import { Button } from '@/components/Button'
 import { Eyebrow } from '@/components/Eyebrow'
 import { Icon } from '@/components/Icon'
 import { ProjectVisual } from '@/components/ProjectVisual'
 import { Title } from '@/components/Title'
 
-export function ProjectDetail({ project, back }: { project: Project; back: () => void }) {
+export function ProjectDetail({ project }: { project: Project }) {
   const sections = [
     { label: 'Ringkasan', anchor: 'overview' },
     { label: 'Latar belakang', anchor: 'the-problem' },
@@ -19,7 +20,7 @@ export function ProjectDetail({ project, back }: { project: Project; back: () =>
   return (
     <>
       <section className="project-detail-hero container">
-        <button className="back-button" onClick={back}><span>←</span> Semua proyek</button>
+        <Link className="back-button" to="/projects"><span>←</span> Semua proyek</Link>
         <div className="detail-title">
           <div><span className="meta">{project.type}</span><Title as="h1">{project.name}</Title><p>{project.subtitle}</p></div>
           <p className="detail-intro">{project.description}</p>
@@ -27,7 +28,7 @@ export function ProjectDetail({ project, back }: { project: Project; back: () =>
         <ProjectVisual project={project} large />
         <div className="detail-meta">
           <div><span>Kategori</span><strong>{project.category}</strong></div>
-          <div><span>Peran</span><strong>Desain & Pengembangan</strong></div>
+          <div><span>Tipe</span><strong>{project.type}</strong></div>
           <div><span>Status</span><strong>{project.status}</strong></div>
         </div>
       </section>

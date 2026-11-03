@@ -28,6 +28,12 @@ describe('routing', () => {
     expect(screen.getByRole('heading', { level: 1, name: /tidak ditemukan/i })).toBeInTheDocument()
   })
 
+  it('merender studi kasus sebagai tautan dengan href asli', () => {
+    renderAt('/projects')
+    const [first] = screen.getAllByRole('link', { name: /lihat studi kasus/i })
+    expect(first).toHaveAttribute('href', '/projects/grosir-track')
+  })
+
   it('berpindah ke halaman tentang lewat navigasi', async () => {
     const user = userEvent.setup()
     renderAt('/')

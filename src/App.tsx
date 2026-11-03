@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef } from 'react'
-import { Route, Routes, useLocation, useNavigate, useParams } from 'react-router-dom'
+import { Route, Routes, useLocation, useParams } from 'react-router-dom'
 import { pageMeta } from '@/data/metadata'
 import { projects } from '@/data/projects'
 import { Footer } from '@/components/Footer'
@@ -15,10 +15,9 @@ import { Skills } from '@/pages/Skills'
 
 function ProjectRoute() {
   const { id } = useParams()
-  const navigate = useNavigate()
   const project = projects.find(item => item.id === id)
   if (!project) return <NotFound />
-  return <ProjectDetail project={project} back={() => navigate('/projects')} />
+  return <ProjectDetail project={project} />
 }
 
 export default function App() {

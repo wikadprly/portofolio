@@ -6,7 +6,7 @@ import { Title } from '@/components/Title'
 export function Skills() {
   return (
     <>
-      <PageHeader eyebrow="Keahlian" title="Keahlian dan teknologi" text="Kemampuan teknis dan nonteknis yang saya kembangkan melalui perkuliahan, proyek, dan pengalaman organisasi." />
+      <PageHeader eyebrow="Keahlian" title="Keahlian dan teknologi" text="Yang saya pakai sehari-hari untuk kuliah dan proyek, plus beberapa hal yang sedang saya pelajari." />
       <section className="container skills-page-grid">
         {skillGroups.map((group, i) => (
           <article key={group.title}>
@@ -16,7 +16,7 @@ export function Skills() {
           </article>
         ))}
       </section>
-      <section className="container skill-note"><span>Pendekatan saya</span><Title>Teknologi berubah, kebiasaan belajar tetap tumbuh.</Title><p>Saya berfokus pada pemahaman dasar, memilih teknologi dengan tepat, dan selalu terbuka pada cara yang lebih baik untuk menyelesaikan masalah.</p></section>
+      <section className="container skill-note"><span>Pendekatan saya</span><Title>Alat baru mudah dipelajari; memilih yang tepat yang sulit.</Title><p>Saya berusaha memahami dasarnya dulu, lalu memilih alat sesuai kebutuhan. Kalau ada cara yang lebih sederhana, saya lebih suka itu.</p></section>
     </>
   )
 }

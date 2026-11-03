@@ -5,28 +5,28 @@ export type PageMeta = {
 
 export const pageMeta: Record<string, PageMeta> = {
   '/': {
-    title: 'Wika Dwi Aprilia — Full-Stack Developer',
-    description: 'Portofolio Wika Dwi Aprilia, full-stack developer asal Semarang. Proyek web, frontend, backend, dan eksplorasi AI/data.',
+    title: 'Wika Dwi Aprilia — Portofolio',
+    description: 'Portofolio Wika Dwi Aprilia, mahasiswa Teknik Informatika Politeknik Negeri Semarang. Berisi proyek web, pengalaman organisasi, dan keahlian teknis.',
   },
   '/about': {
-    title: 'Tentang Saya — Wika Dwi Aprilia',
-    description: 'Profil, pendidikan, sertifikasi, dan nilai kerja Wika Dwi Aprilia sebagai full-stack developer.',
+    title: 'Tentang — Wika Dwi Aprilia',
+    description: 'Latar belakang, pendidikan, minat, dan cara kerja Wika Dwi Aprilia.',
   },
   '/projects': {
     title: 'Proyek — Wika Dwi Aprilia',
-    description: 'Kumpulan proyek full-stack, frontend, dan AI/data yang dikerjakan Wika Dwi Aprilia.',
+    description: 'Proyek kuliah, proyek pribadi, dan pekerjaan klien yang dikerjakan Wika Dwi Aprilia.',
   },
   '/experience': {
     title: 'Pengalaman — Wika Dwi Aprilia',
-    description: 'Pengalaman organisasi dan kepanitiaan Wika Dwi Aprilia di lingkungan kampus.',
+    description: 'Pengalaman organisasi dan kepanitiaan Wika Dwi Aprilia selama kuliah di Politeknik Negeri Semarang.',
   },
   '/skills': {
     title: 'Keahlian — Wika Dwi Aprilia',
-    description: 'Keahlian teknis Wika Dwi Aprilia: JavaScript, TypeScript, React, Next.js, Laravel, PostgreSQL, dan Python.',
+    description: 'Bahasa pemrograman, framework, dan alat yang dipakai Wika Dwi Aprilia untuk kuliah dan proyek.',
   },
   '/contact': {
     title: 'Kontak — Wika Dwi Aprilia',
-    description: 'Hubungi Wika Dwi Aprilia untuk peluang magang, kerja, atau kolaborasi proyek.',
+    description: 'Email, GitHub, LinkedIn, dan Instagram Wika Dwi Aprilia.',
   },
   '*': {
     title: 'Halaman tidak ditemukan — Wika Dwi Aprilia',

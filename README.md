@@ -60,11 +60,24 @@ Konten teks (proyek, pengalaman, keahlian) diubah di `src/data/`, bukan di dalam
 
 ## Deployment
 
-Hasil build statis ada di `dist/`. Karena memakai `BrowserRouter`, hosting perlu **SPA fallback**: arahkan semua request yang tidak menemukan file ke `index.html`.
+Hasil build statis ada di `dist/`. Karena memakai `BrowserRouter`, hosting perlu **SPA fallback**: arahkan semua request yang tidak menemukan file ke `index.html`. Konfigurasinya sudah tersedia:
 
-- Netlify: buat `public/_redirects` berisi `/* /index.html 200`.
-- Vercel: tambahkan rewrite `{ "source": "/(.*)", "destination": "/index.html" }`.
+- Netlify: `public/_redirects` berisi `/* /index.html 200`.
+- Vercel: `vercel.json` berisi rewrite ke `/index.html`.
 - Nginx: `try_files $uri $uri/ /index.html;`.
+- GitHub Pages: tidak mendukung SPA fallback; perlu `404.html` berisi salinan `index.html`.
+
+## Domain & SEO
+
+Repo ini memakai `https://wika-portfolio.example.com` sebagai **placeholder** domain di `index.html` (canonical, `og:url`, `og:image`, Twitter Card), `public/robots.txt`, dan `public/sitemap.xml`.
+
+Setelah deploy, ganti semuanya sekaligus:
+
+```bash
+grep -rl wika-portfolio.example.com --exclude-dir=node_modules . | xargs sed -i 's|https://wika-portfolio.example.com|https://domain-anda.com|g'
+```
+
+Kartu pratinjau sosial ada di `public/og-image.png` (1200×630).
 
 ## Kontak
 

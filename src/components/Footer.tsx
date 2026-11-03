@@ -8,7 +8,7 @@ export function Footer() {
       <div className="footer-main container">
         <div>
           <Link className="brand footer-brand" to="/">Wika<span>.</span></Link>
-          <p>Membangun produk digital yang jelas,<br />bermanfaat, dan dapat diandalkan.</p>
+          <p>Catatan kecil tentang kuliah,<br />proyek, dan hal yang sedang saya pelajari.</p>
         </div>
         <div className="footer-nav">
           <span>Jelajahi</span>
@@ -25,7 +25,7 @@ export function Footer() {
       </div>
       <div className="footer-bottom container">
         <span>© 2026 {profile.name}</span>
-        <span>Dirancang dan dibangun dengan sepenuh hati.</span>
+        <span>Dibangun dengan React dan TypeScript.</span>
       </div>
     </footer>
   )
