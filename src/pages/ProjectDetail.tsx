@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Button } from '@/components/Button'
 import { Eyebrow } from '@/components/Eyebrow'
 import { Icon } from '@/components/Icon'
+import { ProjectGallery } from '@/components/ProjectGallery'
 import { ProjectVisual } from '@/components/ProjectVisual'
 import { Title } from '@/components/Title'
 
@@ -24,7 +25,11 @@ export function ProjectDetail({ project }: { project: Project }) {
           <div><span className="meta">{project.type}</span><Title as="h1">{project.name}</Title><p>{project.subtitle}</p></div>
           <p className="detail-intro">{project.description}</p>
         </div>
-        <ProjectVisual project={project} large />
+        {project.screenshots && project.screenshots.length > 1 ? (
+          <ProjectGallery screenshots={project.screenshots} />
+        ) : (
+          <ProjectVisual project={project} large />
+        )}
         <div className="detail-meta">
           <div><span>Kategori</span><strong>{project.category}</strong></div>
           <div><span>Tipe</span><strong>{project.type}</strong></div>
@@ -43,12 +48,13 @@ export function ProjectDetail({ project }: { project: Project }) {
           <article id="my-role"><Eyebrow>Peran & kontribusi</Eyebrow><Title>Kontribusi saya</Title><p>{project.role}</p></article>
           <article id="implementation"><Eyebrow>Implementasi teknis</Eyebrow><Title>Proses pengembangan</Title><p>{project.implementation}</p><div className="tech-stack">{project.technologies.map(tech => <span key={tech}>{tech}</span>)}</div></article>
           <article id="learnings"><Eyebrow>Tantangan & pembelajaran</Eyebrow><Title>Hal yang saya pelajari</Title><p>{project.challenges}</p></article>
-          {(project.repositoryUrl || project.demoUrl) && (
+          {(project.repositoryUrl || project.demoUrl || project.links?.length) && (
             <article className="project-links">
               <div><Eyebrow>Jelajahi proyek</Eyebrow><Title>Tautan & sumber</Title></div>
               <div>
                 {project.repositoryUrl && <Button variant="secondary" icon="github" href={project.repositoryUrl} external>Repository</Button>}
                 {project.demoUrl && <Button icon="external" href={project.demoUrl} external>Demo langsung</Button>}
+                {project.links?.map(link => <Button key={link.href} icon="external" href={link.href} external>{link.label}</Button>)}
               </div>
             </article>
           )}

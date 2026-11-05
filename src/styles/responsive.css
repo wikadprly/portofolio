@@ -69,6 +69,7 @@
   .project-visual.large { min-height: 300px; padding: 28px; }
   .project-visual.large .visual-mark { right: 20px; bottom: -16px; font-size: 110px; }
   .project-visual.large .visual-sub { max-width: 100%; }
+  .project-gallery { grid-template-columns: 1fr; }
   .detail-meta { grid-template-columns: 1fr; }
   .detail-meta div { border-bottom: 1px solid var(--border); }
   .detail-meta div:last-child { border-bottom: 0; }

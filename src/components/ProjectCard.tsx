@@ -15,10 +15,11 @@ export function ProjectCard({ project }: { project: Project }) {
         <div className="tags">{project.technologies.slice(0, 4).map((tech) => <span key={tech}>{tech}</span>)}</div>
         <div className="card-actions">
           <Button variant="text" icon="arrow" to={`/projects/${project.id}`}>Lihat studi kasus</Button>
-          {(project.repositoryUrl || project.demoUrl) && (
+          {(project.repositoryUrl || project.demoUrl || project.links?.length) && (
             <div className="icon-links">
               {project.repositoryUrl && <a href={project.repositoryUrl} target="_blank" rel="noreferrer" aria-label={`Repository ${project.name}`}><Icon name="github" /></a>}
               {project.demoUrl && <a href={project.demoUrl} target="_blank" rel="noreferrer" aria-label={`Demo ${project.name}`}><Icon name="external" /></a>}
+              {project.links?.map(link => <a key={link.href} href={link.href} target="_blank" rel="noreferrer" aria-label={`${link.label} ${project.name}`}><Icon name="external" /></a>)}
             </div>
           )}
         </div>

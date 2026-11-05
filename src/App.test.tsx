@@ -39,6 +39,6 @@ describe('routing', () => {
     renderAt('/')
     const nav = screen.getByRole('navigation', { name: 'Navigasi utama' })
     await user.click(within(nav).getByRole('link', { name: 'Tentang' }))
-    expect(screen.getByRole('heading', { level: 1, name: /mengenal wika dwi aprilia/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { level: 1, name: /mari terhubung & berkolaborasi/i })).toBeInTheDocument()
   })
 })

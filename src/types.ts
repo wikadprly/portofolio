@@ -26,6 +26,11 @@ export type ProjectScreenshot = {
   alt: string
 }
 
+export type ProjectLink = {
+  label: string
+  href: string
+}
+
 export type Project = {
   id: string
   name: string
@@ -44,6 +49,7 @@ export type Project = {
   challenges: string
   repositoryUrl?: string
   demoUrl?: string
+  links?: ProjectLink[]
   screenshots?: ProjectScreenshot[]
 }
 

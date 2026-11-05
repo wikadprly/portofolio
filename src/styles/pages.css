@@ -63,8 +63,14 @@
 .project-visual.large .visual-mark { right: 40px; bottom: -34px; font-size: 210px; }
 .project-visual.large .visual-label { font-size: 11px; }
 .project-visual.large .visual-sub { font-size: 16px; }
-.project-visual.large.has-cover { min-height: 0; padding: 0; }
-.project-visual.large.has-cover img { position: static; height: auto; }
+.project-visual.large.has-cover { height: clamp(260px, 38vw, 470px); min-height: 0; padding: 0; background: #eef3f7; }
+.project-visual.large.has-cover img { object-fit: cover; object-position: top; }
+.project-visual.large.has-cover.is-portrait { height: clamp(340px, 48vw, 540px); }
+.project-visual.large.has-cover.is-portrait img { object-fit: contain; object-position: center; }
+.project-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.project-gallery figure { display: flex; flex-direction: column; gap: 8px; margin: 0; }
+.project-gallery img { width: 100%; height: clamp(260px, 36vw, 440px); object-fit: contain; background: #eef3f7; border: 1px solid var(--border); }
+.project-gallery figcaption { color: var(--slate); font-size: 12px; }
 .detail-meta { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--border); }
 .detail-meta div { padding: 20px 0; }
 .detail-meta span, .detail-meta strong { display: block; }
