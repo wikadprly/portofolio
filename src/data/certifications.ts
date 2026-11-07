@@ -14,4 +14,11 @@ import type { Certification } from '@/types'
  *   skills: ['HTML', 'CSS', 'JavaScript'],
  * },
  */
-export const certifications: Certification[] = []
+export const certifications: Certification[] = [
+  {
+    title: 'Full-Stack Web Development Learning Path',
+    issuer: 'ASAH × Dicoding — Tech Scholarship Program',
+    year: 'Agu — Des 2026',
+    skills: ['Dasar Pemrograman', 'GitHub', 'Web Development', 'Dasar AI'],
+  },
+]

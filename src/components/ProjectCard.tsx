@@ -6,7 +6,7 @@ import { Title } from '@/components/Title'
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="project-card">
+    <article className="project-card" data-reveal>
       <ProjectVisual project={project} />
       <div className="project-card-body">
         <span className="meta">{project.type}</span>

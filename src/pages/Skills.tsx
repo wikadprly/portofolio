@@ -23,7 +23,7 @@ export function Skills() {
           />
           <div className="cert-grid">
             {certifications.map((certification) => (
-              <article className="cert-card" key={certification.title}>
+              <article className="cert-card" key={certification.title} data-reveal>
                 <span>{certification.year}</span>
                 <Title as="h3">{certification.title}</Title>
                 <p>{certification.issuer}</p>
@@ -46,7 +46,7 @@ export function Skills() {
         />
         <div className="skills-rows">
           {skillGroups.map((group) => (
-            <div className="skills-row" key={group.title}>
+            <div className="skills-row" key={group.title} data-reveal>
               <div className="skills-row-head"><Icon name={group.icon} size={18} /><Title as="h3">{group.title}</Title></div>
               <div className="large-tags">{group.items.map(item => <span key={item}>{item}</span>)}</div>
             </div>

@@ -8,7 +8,7 @@ export function Footer() {
       <div className="footer-main container">
         <div>
           <Link className="brand footer-brand" to="/">Wikadprly<span>.</span></Link>
-          <p>Exploring technology, building ideas.<br />Semarang, Indonesia.</p>
+          <p>Exploring technology, building ideas.<br />Cilacap, Jawa Tengah & Semarang, Indonesia.</p>
         </div>
         <div className="footer-nav">
           <span>Jelajahi</span>

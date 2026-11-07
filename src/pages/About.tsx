@@ -1,4 +1,5 @@
 import portrait from '@/assets/foto-wika.jpg'
+import { profile } from '@/data/profile'
 import { Eyebrow } from '@/components/Eyebrow'
 import { SectionHeading } from '@/components/SectionHeading'
 import { Title } from '@/components/Title'
@@ -21,12 +22,12 @@ export function About() {
   return (
     <>
       <section className="container profile-section">
-        <div className="profile-visual">
+        <div className="profile-visual" data-reveal>
           <img className="profile-image" src={portrait} alt="Foto Wika Dwi Aprilia" />
-          <span>Semarang, Indonesia</span>
+          <span>Cilacap · Semarang</span>
         </div>
 
-        <div className="profile-copy">
+        <div className="profile-copy" data-reveal>
           <Eyebrow>Tentang Saya</Eyebrow>
           <Title as="h1">Mari Terhubung & Berkolaborasi.</Title>
 
@@ -59,7 +60,7 @@ export function About() {
 
           <dl className="profile-data">
             <div><dt>Nama</dt><dd>Wika Dwi Aprilia</dd></div>
-            <div><dt>Domisili</dt><dd>Semarang, Indonesia</dd></div>
+            <div><dt>Domisili</dt><dd>{profile.origin} (asal) · Semarang (kuliah)</dd></div>
             <div><dt>Pendidikan</dt><dd>D3 Teknik Informatika</dd></div>
             <div><dt>Institusi</dt><dd>Politeknik Negeri Semarang</dd></div>
           </dl>
@@ -75,11 +76,20 @@ export function About() {
 
           <div className="education-timeline">
             <article>
-              <span>Sekarang</span>
+              <span>2023 — Sekarang</span>
               <div>
                 <Title as="h3">D3 Teknik Informatika</Title>
                 <p>Politeknik Negeri Semarang</p>
                 <small>Semarang, Indonesia</small>
+              </div>
+            </article>
+
+            <article>
+              <span>2020 — 2023</span>
+              <div>
+                <Title as="h3">MIPA</Title>
+                <p>SMA Negeri 1 Sampang</p>
+                <small>Sampang, Jawa Timur</small>
               </div>
             </article>
 
@@ -131,7 +141,7 @@ export function About() {
 
         <div className="values-grid">
           {values.map(([title, text], i) => (
-            <article key={title}>
+            <article key={title} data-reveal>
               <span>0{i + 1}</span>
               <Title as="h3">{title}</Title>
               <p>{text}</p>

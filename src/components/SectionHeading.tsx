@@ -4,7 +4,7 @@ import { Title } from '@/components/Title'
 
 export function SectionHeading({ eyebrow, title, text, action }: { eyebrow: string; title: string; text?: string; action?: ReactNode }) {
   return (
-    <div className="section-heading">
+    <div className="section-heading" data-reveal>
       <div>
         <Eyebrow>{eyebrow}</Eyebrow>
         <Title>{title}</Title>

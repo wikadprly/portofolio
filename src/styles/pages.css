@@ -23,6 +23,7 @@
 .education-timeline h3 { font-size: 19px; }
 .education-timeline article p { margin-top: 4px; font-size: 13px; }
 .education-timeline small { display: block; margin-top: 4px; color: var(--slate); font-size: 12px; }
+.education-timeline article + article { margin-top: 20px; }
 .education-timeline > p { margin-top: 24px; font-size: 14px; }
 .numbered-list { border-top: 1px solid var(--border); }
 .numbered-list div { display: grid; grid-template-columns: 60px 1fr; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--border); }
@@ -33,13 +34,16 @@
 .goals-section .lead { color: #b7c5d2; font: 500 16px/1.75 var(--font-heading); }
 .values-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--border); border-left: 1px solid var(--border); }
 .values-grid article { min-height: 200px; padding: 24px; background: var(--surface); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.values-grid article { transition: background .3s ease; }
+.values-grid article:hover { background: var(--powder); }
 .values-grid article > span { color: var(--sky-dark); font-size: 12px; }
 .values-grid h3 { margin-top: 44px; font-size: 17px; }
 .values-grid p { margin-top: 8px; font-size: 13px; }
 
 .cert-section { padding-block: 64px 0; }
 .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-.cert-card { min-height: 170px; padding: 26px; background: var(--surface); border: 1px solid var(--border); }
+.cert-card { min-height: 170px; padding: 26px; background: var(--surface); border: 1px solid var(--border); transition: transform .35s cubic-bezier(.22, .7, .24, 1), box-shadow .35s ease, border-color .25s ease; }
+.cert-card:hover { transform: translateY(-4px); border-color: #d6e2ec; box-shadow: var(--shadow); }
 .cert-card > span { color: var(--sky-dark); font-size: 12px; font-weight: 600; }
 .cert-card h3 { margin-top: 20px; font-size: 18px; }
 .cert-card p { margin-top: 6px; font-size: 13px; }

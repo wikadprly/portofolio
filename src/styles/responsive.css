@@ -5,6 +5,7 @@
   .mobile-nav > a { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--border); color: var(--slate); text-align: left; }
   .mobile-nav > a.active { color: var(--navy); font-weight: 600; }
   .hero { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .hero-glow { width: 440px; height: 440px; }
   .portrait { height: 430px; }
   .portfolio-strip { grid-template-columns: repeat(2, 1fr); }
   .portfolio-strip div:nth-child(2) { border-right: 0; }
@@ -26,7 +27,11 @@
   .nav-actions > .button { display: none; }
   .mobile-nav { top: 64px; }
   .hero { min-height: auto; grid-template-columns: 1fr; gap: 44px; padding-block: 44px 56px; }
-  .hero-copy h1 { font-size: 40px; }
+  .hero-glow { top: -60px; right: -120px; width: 340px; height: 340px; }
+  .hero-copy h1 { font-size: 42px; }
+  .portrait-wrap::before { inset: 14px -14px -14px 14px; }
+  .marquee-group { gap: 30px; padding: 12px 30px 12px 0; }
+  .marquee-group span { gap: 30px; font-size: 10.5px; }
   .hero-role { display: block; line-height: 1.7; }
   .hero-role i { display: none; }
   .hero-actions { flex-direction: column; align-items: stretch; }

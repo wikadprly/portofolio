@@ -11,11 +11,14 @@ import { ProjectCard } from '@/components/ProjectCard'
 import { SectionHeading } from '@/components/SectionHeading'
 import { Title } from '@/components/Title'
 
+const marqueeItems = ['React', 'Next.js', 'TypeScript', 'Laravel', 'PostgreSQL', 'Prisma', 'Tailwind CSS', 'Python', 'Git']
+
 export function Home() {
   return (
     <>
       <section className="hero container">
-        <div className="hero-copy">
+        <div className="hero-glow" aria-hidden="true" />
+        <div className="hero-copy" data-reveal>
           <div className="availability"><span /> Terbuka untuk magang & kolaborasi</div>
           <Eyebrow>{profile.role}</Eyebrow>
           <Title as="h1">{profile.name}</Title>
@@ -32,19 +35,29 @@ export function Home() {
             <a href={profile.instagram} target="_blank" rel="noreferrer"><Icon name="instagram" />Instagram</a>
           </div>
         </div>
-        <div className="portrait-wrap">
+        <div className="portrait-wrap" data-reveal>
           <div className="portrait">
             <img className="portrait-image" src={portrait} alt="Foto Wika Dwi Aprilia" />
           </div>
-          <div className="portrait-caption"><span>{profile.name}</span><small>{profile.location}</small></div>
+          <div className="portrait-caption"><span>{profile.name}</span><small>{profile.origin}</small></div>
         </div>
       </section>
 
-      <section className="portfolio-strip container" aria-label="Ringkasan profil">
+      <div className="marquee" aria-hidden="true">
+        <div className="marquee-track">
+          {[0, 1].map((group) => (
+            <div className="marquee-group" key={group}>
+              {marqueeItems.map((item) => <span key={item}>{item}</span>)}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <section className="portfolio-strip container" aria-label="Ringkasan profil" data-reveal>
         <div><span>Pendidikan</span><strong>D3 Teknik Informatika</strong></div>
         <div><span>Institusi</span><strong>Politeknik Negeri Semarang</strong></div>
         <div><span>Minat</span><strong>Teknologi & digital</strong></div>
-        <div><span>Lokasi</span><strong>{profile.location}</strong></div>
+        <div><span>Domisili</span><strong>Cilacap · Semarang</strong></div>
       </section>
 
       <section className="section container">
@@ -56,18 +69,18 @@ export function Home() {
 
       <section className="about-preview">
         <div className="container split-layout">
-          <div className="about-copy">
+          <div className="about-copy" data-reveal>
             <Eyebrow>Tentang saya</Eyebrow>
             <Title>Mengenal lebih jauh.</Title>
             <p className="lead">Saya menempuh pendidikan D3 Teknik Informatika di Politeknik Negeri Semarang.</p>
             <p>Selama berkuliah, saya terlibat dalam proyek akademik, kegiatan organisasi, dan pengembangan kemampuan di bidang teknologi. Saya menikmati kesempatan mencoba hal baru, bertukar ide, dan mengembangkan sesuatu bersama orang lain.</p>
             <Button variant="text" icon="arrow" to="/about">Selengkapnya tentang saya</Button>
           </div>
-          <div className="quick-facts">
+          <div className="quick-facts" data-reveal>
             <div><span>Pendidikan</span><strong>D3 Teknik Informatika</strong></div>
             <div><span>Institusi</span><strong>Politeknik Negeri Semarang</strong></div>
             <div><span>Minat</span><strong>Teknologi & digital</strong></div>
-            <div><span>Domisili</span><strong>{profile.location}</strong></div>
+            <div><span>Domisili</span><strong>Cilacap (asal) · Semarang (kuliah)</strong></div>
           </div>
         </div>
       </section>
@@ -88,7 +101,7 @@ export function Home() {
         <div className="container">
           <SectionHeading eyebrow="Eksplorasi" title="Hal-hal yang sedang saya pelajari." text="Dari perkuliahan, proyek, dan latihan sendiri." action={<Button variant="text" icon="arrow" to="/skills">Lihat perjalanan belajar</Button>} />
           <div className="skill-bands">
-            {skillGroups.slice(0, 4).map(group => <div key={group.title}><Icon name={group.icon} /><span>{group.title}</span><p>{group.items.join(' · ')}</p></div>)}
+            {skillGroups.slice(0, 4).map(group => <div key={group.title} data-reveal><Icon name={group.icon} /><span>{group.title}</span><p>{group.items.join(' · ')}</p></div>)}
           </div>
         </div>
       </section>

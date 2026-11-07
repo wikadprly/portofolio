@@ -20,8 +20,9 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
 body { margin: 0; background: var(--off-white); color: var(--navy); line-height: 1.6; }
+.app { overflow-x: clip; }
 ul, ol, dl, dd, figure, blockquote { margin: 0; }
 img, svg { max-width: 100%; }
 ::selection { background: rgba(143, 184, 216, .35); }
@@ -66,3 +67,14 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--sky-dark); font-size: 11.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
 .eyebrow span { width: 24px; height: 1px; background: var(--sky); }
 .meta { color: var(--sky-dark); font-size: 11.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+
+.scroll-progress { position: fixed; top: 0; left: 0; right: 0; z-index: 60; height: 2px; background: linear-gradient(90deg, var(--sky), var(--sky-dark)); transform: scaleX(0); transform-origin: 0 50%; pointer-events: none; }
+
+[data-reveal] { opacity: 0; transform: translateY(26px); transition: opacity .7s cubic-bezier(.22, .7, .24, 1), transform .7s cubic-bezier(.22, .7, .24, 1); will-change: opacity, transform; }
+[data-reveal].is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1; transform: none; transition: none; }
+}
+
+.button .icon { transition: transform .25s ease; }
+.button:hover .icon, .button:focus-visible .icon { transform: translateX(3px); }

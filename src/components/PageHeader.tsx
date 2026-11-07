@@ -3,7 +3,7 @@ import { Title } from '@/components/Title'
 
 export function PageHeader({ eyebrow, title, text }: { eyebrow: string; title: string; text: string }) {
   return (
-    <header className="page-header container">
+    <header className="page-header container" data-reveal>
       <Eyebrow>{eyebrow}</Eyebrow>
       <Title as="h1">{title}</Title>
       <p>{text}</p>

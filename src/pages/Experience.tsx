@@ -16,7 +16,7 @@ export function Experience() {
       <PageHeader
         eyebrow="Organisasi & pengalaman"
         title="Pengalaman di luar perkuliahan."
-        text="Kegiatan organisasi dan kepanitiaan selama berkuliah di Politeknik Negeri Semarang, diurutkan dari yang paling baru."
+        text="Pengalaman kerja, organisasi, dan kepanitiaan selama berkuliah di Politeknik Negeri Semarang, diurutkan dari yang paling baru."
       />
       <section className="container timeline-section">
         <div className="timeline-intro">
@@ -33,7 +33,7 @@ export function Experience() {
               </div>
               <div className="timeline">
                 {group.items.map((item, i) => (
-                  <article key={`${item.role}-${item.period}`}>
+                  <article key={`${item.role}-${item.period}`} data-reveal>
                     <div className="timeline-dot"><span>{String(i + 1).padStart(2, '0')}</span></div>
                     <div className="timeline-content">
                       <span className="meta"><Icon name="calendar" size={15} />{item.period}</span>

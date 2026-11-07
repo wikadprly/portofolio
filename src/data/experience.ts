@@ -15,10 +15,16 @@ import type { ExperienceItem } from '@/types'
  */
 export const workExperience: ExperienceItem[] = [
   {
-    period: '[periode magang]',
-    role: '[posisi magang]',
-    org: '[nama perusahaan]',
-    text: '[apa yang dikerjakan, alat yang dipakai, dan hasilnya]',
+    period: 'Sep 2026 — Sekarang',
+    role: 'Tutor / Pengajar Privat',
+    org: 'Mandiri',
+    text: 'Mengajar materi sesuai kebutuhan dan kurikulum siswa, menyusun bahan belajar yang mudah dipahami, serta mendampingi proses evaluasi belajar.',
+  },
+  {
+    period: 'Nov 2023 — 2024',
+    role: 'Pengelola Toko',
+    org: 'Toko Rema',
+    text: 'Mengelola operasional harian toko, menata barang, melayani pembeli, dan merekap nota pembelian setiap hari.',
   },
 ]
 
@@ -28,6 +34,12 @@ export const organizationalExperience: ExperienceItem[] = [
     role: 'Deputi Kementerian Luar Negeri',
     org: 'BEM KBM Politeknik Negeri Semarang',
     text: 'Membantu arah kerja kementerian dan mengoordinasikan program hubungan eksternal bersama anggota lain.',
+  },
+  {
+    period: 'Jul 2025 — Jul 2026',
+    role: 'Staf Divisi Kesejahteraan / PSDM',
+    org: 'Orda Keluarga Mahasiswa Polines Cilacap',
+    text: 'Mendukung kaderisasi dan pengembangan anggota, koordinasi internal, sosialisasi SPMB, serta menjadi ketua pelaksana Makrab Kurmapoci.',
   },
   {
     period: 'Apr 2026',
@@ -58,5 +70,11 @@ export const organizationalExperience: ExperienceItem[] = [
     role: 'Staf Muda Kementerian Luar Negeri',
     org: 'BEM KBM Politeknik Negeri Semarang',
     text: 'Membantu kegiatan eksternal kementerian dan belajar bekerja dalam tim organisasi.',
+  },
+  {
+    period: '2022 — 2023',
+    role: 'Pemangku Adat',
+    org: 'Dewan Ambalan SMAN 1 Sampang',
+    text: 'Mengelola keberlangsungan adat Ambalan Pattimura — Cut Nyak Dien serta membantu pembina mendisiplinkan dan mengoordinasikan anggota pramuka.',
   },
 ]
