@@ -116,6 +116,13 @@ export const projects: Project[] = [
       'Website dibangun dengan Next.js, TypeScript, dan Tailwind CSS. Prisma digunakan untuk mengakses data pada PostgreSQL, termasuk data tarif dan agen serta informasi yang ditampilkan pada website.',
     challenges:
       'Tantangannya adalah memenuhi kebutuhan dua jenis pengguna: pelanggan yang mencari informasi dengan cepat dan admin yang perlu mengelola konten. Struktur halaman dan data perlu dibuat konsisten untuk keduanya.',
+      screenshots: [
+      {
+        src: '/projects/CahayaCargoExpress/beranda.png',
+        alt: 'Beranda Cahaya Cargo Express',
+      },
+    ],
+    demoUrl: 'https://cce-portofolio.vercel.app',
   },
   {
     id: 'tomato-ai',
@@ -325,36 +332,5 @@ export const projects: Project[] = [
     ],
     demoUrl: 'https://www.godigitalcreative.web.id/',
   },
-  {
-    id: 'parkirkita',
-    name: 'ParkirKita',
-    subtitle: 'Sistem Manajemen Parkir',
-    status: 'Proyek kelompok akademik',
-    description:
-      'Aplikasi manajemen parkir berbasis Python dan Flet yang menerapkan beberapa design pattern.',
-    technologies: [
-      'Python',
-      'Flet',
-      'Strategy Pattern',
-      'State Pattern',
-      'Observer Pattern',
-    ],
-    type: 'Proyek Akademik',
-    category: 'Desktop Application',
-    code: 'PK',
-    tone: 'sand',
-    background:
-      'Pengelolaan proses parkir memerlukan alur yang jelas untuk menangani perubahan keadaan kendaraan dan proses layanan. ParkirKita dikembangkan sebagai aplikasi manajemen parkir dengan struktur yang menerapkan design pattern.',
-    objectives: [
-      'Mengembangkan aplikasi manajemen parkir menggunakan Python dan Flet',
-      'Menerapkan design pattern untuk mengorganisasi logika aplikasi',
-      'Menyusun alur perubahan status pada proses parkir',
-    ],
-    role:
-      'Saya berkontribusi dalam pengembangan ParkirKita sebagai proyek kelompok akademik. Proyek ini menerapkan Strategy Pattern, State Pattern, dan Observer Pattern untuk mengorganisasi struktur serta alur aplikasi.',
-    implementation:
-      'Aplikasi dibuat menggunakan Python dan Flet. Struktur program menerapkan Strategy Pattern, State Pattern, dan Observer Pattern untuk memisahkan strategi, merepresentasikan perubahan status, serta mengelola pemberitahuan perubahan.',
-    challenges:
-      'Tantangannya adalah menerapkan design pattern sesuai kebutuhan aplikasi, sekaligus menjaga agar struktur program mudah dipahami dan dikembangkan.',
-  },
+
 ]

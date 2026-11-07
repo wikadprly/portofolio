@@ -19,7 +19,7 @@ export function Navbar() {
   return (
     <nav className="navbar" aria-label="Navigasi utama">
       <div className="nav-inner container">
-        <Link className="brand" to="/" aria-label="Kembali ke beranda" onClick={() => setOpen(false)}>Wika<span>.</span></Link>
+        <Link className="brand" to="/" aria-label="Kembali ke beranda" onClick={() => setOpen(false)}>Wikadprly<span>.</span></Link>
         <div className="desktop-nav">
           {navItems.map((item) => (
             <NavLink
