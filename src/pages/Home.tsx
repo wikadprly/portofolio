@@ -9,6 +9,7 @@ import { Eyebrow } from '@/components/Eyebrow'
 import { Icon } from '@/components/Icon'
 import { ProjectCard } from '@/components/ProjectCard'
 import { SectionHeading } from '@/components/SectionHeading'
+import { Sparkles } from '@/components/Sparkles'
 import { Title } from '@/components/Title'
 
 const marqueeItems = ['React', 'Next.js', 'TypeScript', 'Laravel', 'PostgreSQL', 'Prisma', 'Tailwind CSS', 'Python', 'Git']
@@ -18,6 +19,7 @@ export function Home() {
     <>
       <section className="hero container">
         <div className="hero-glow" aria-hidden="true" />
+        <Sparkles interactive />
         <div className="hero-copy" data-reveal>
           <div className="availability"><span /> Terbuka untuk magang & kolaborasi</div>
           <Eyebrow>{profile.role}</Eyebrow>
@@ -98,6 +100,7 @@ export function Home() {
       </section>
 
       <section className="skills-preview">
+        <Sparkles variant="panel" />
         <div className="container">
           <SectionHeading eyebrow="Eksplorasi" title="Hal-hal yang sedang saya pelajari." text="Dari perkuliahan, proyek, dan latihan sendiri." action={<Button variant="text" icon="arrow" to="/skills">Lihat perjalanan belajar</Button>} />
           <div className="skill-bands">

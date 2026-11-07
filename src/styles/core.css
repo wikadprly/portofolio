@@ -78,3 +78,18 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 .button .icon { transition: transform .25s ease; }
 .button:hover .icon, .button:focus-visible .icon { transform: translateX(3px); }
+.button.primary { position: relative; overflow: hidden; }
+.button.primary::after { position: absolute; inset: 0; content: ''; background: linear-gradient(120deg, transparent 32%, rgba(255, 255, 255, .22) 50%, transparent 68%); transform: translateX(-130%); transition: transform .7s ease; pointer-events: none; }
+.button.primary:hover::after, .button.primary:focus-visible::after { transform: translateX(130%); }
+
+.sparkles { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.sparkle { position: absolute; color: var(--sky); fill: currentColor; opacity: .4; transform: translate3d(calc(var(--px, 0) * var(--depth, 10) * 1px), calc(var(--py, 0) * var(--depth, 10) * 1px), 0); transition: transform .6s cubic-bezier(.22, .7, .24, 1); animation: sparkleTwinkle 4.5s ease-in-out infinite; }
+@keyframes sparkleTwinkle {
+  0%, 100% { opacity: .16; scale: .7; }
+  50% { opacity: .72; scale: 1; }
+}
+.sparkles-panel .sparkle { opacity: .5; }
+@media (prefers-reduced-motion: reduce) {
+  .sparkle { animation: none; opacity: .45; }
+  .button.primary::after { display: none; }
+}

@@ -89,7 +89,7 @@ export function About() {
               <div>
                 <Title as="h3">MIPA</Title>
                 <p>SMA Negeri 1 Sampang</p>
-                <small>Sampang, Jawa Timur</small>
+                <small>Sampang, Cilacap</small>
               </div>
             </article>
 
