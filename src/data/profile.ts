@@ -5,7 +5,7 @@ export const profile = {
   email: 'wikkadwia@gmail.com',
   origin: 'Cilacap, Jawa Tengah',
   studyLocation: 'Semarang, Indonesia',
-  cvUrl: '',
+  cvUrl: '/cv/cv.pdf',
   github: 'https://github.com/wikadprly',
   linkedin: 'https://www.linkedin.com/in/wikadwiaprilia',
   instagram: 'https://www.instagram.com/wdprlyy/',
